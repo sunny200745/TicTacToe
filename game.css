@@ -2,13 +2,12 @@
 	width: 600px;
 	margin: auto;
 	text-align: center;
+	font-size: 24px;
+	color:rgb(76, 70, 87);
 }
 .board{
-	
-	border: 1px solid black;
 	background: #eee;
-
-	}
+}
 .cube{
 	float: left;
 	display: inline-block;
@@ -16,11 +15,10 @@
 	width: 192px;
 	height: 192px;
 	margin: 2px;
+	color: maroon;
 	font-size: 186px;
 	line-height: 190px;
-	background: #bbb;
-	text-shadow: 5px 5px 25px #555;
-	box-shadow: 5px 5px 5px #555
-	
-
+	background: #9EE1BF;
+	text-shadow: 15px 15px 35px #040404;
+	box-shadow: 15px 15px 15px #555
 }
