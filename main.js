@@ -39,11 +39,44 @@ var clickHandler = function(pos){
 var cubeClass = document.getElementsByClassName("cube");
 
 var clickHandler = function() {
-    var attr = this.getAttribute("id");
-        
-    document.getElementById(attr).innerHTML = "X";
+  var attr = this.getAttribute("id");      
+  document.getElementById(attr).innerHTML = "X";
+  
+  
+  // Conditions
+  if(_innerHtml('0') == 'X' && _innerHtml('2') == 'X' && _innerHtml('1') == 'X'){
+    alert("Player Playing with X Wins!!!");
+  }else if(_innerHtml('3') == 'X' && _innerHtml('4') == 'X' && _innerHtml('5') == 'X'){
+    alert("Player Playing with X Wins!!!");
+  }else if(_innerHtml('6') == 'X' && _innerHtml('7') == 'X' && _innerHtml('8') == 'X'){
+    alert("Player Playing with X Wins!!!");
+  }else if(_innerHtml('0') == 'X' && _innerHtml('3') == 'X' && _innerHtml('6') == 'X'){
+    alert("Player Playing with X Wins!!!");
+  }else if(_innerHtml('1') == 'X' && _innerHtml('4') == 'X' && _innerHtml('7') == 'X'){
+    alert("Player Playing with X Wins!!!");
+  }else if(_innerHtml('2') == 'X' && _innerHtml('5') == 'X' && _innerHtml('8') == 'X'){
+    alert("Player Playing with X Wins!!!");//////////////////////////
+  }else if(_innerHtml('0') == 'X' && _innerHtml('4') == 'X' && _innerHtml('8') == 'X'){
+    alert("Player Playing with X Wins!!!");
+  }else if(_innerHtml('2') == 'X' && _innerHtml('4') == 'X' && _innerHtml('6') == 'X'){
+    alert("Player Playing with X Wins!!!");
+  }
+};
+
+function _innerHtml(attr){
+  return document.getElementById(attr).innerHTML
 };
 
 for(var i=0;i<cubeClass.length;i++){
-    cubeClass[i].addEventListener('click', clickHandler, false);
-}
+  cubeClass[i].addEventListener('click', clickHandler, false);
+};
+
+
+// Reset Functionality
+var resetGame = function(){
+  for(var i=0;i<cubeClass.length;i++){
+    cubeClass[i].innerHTML = "&nbsp;"
+  };
+};
+
+
